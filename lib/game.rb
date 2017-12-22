@@ -35,7 +35,7 @@ attr_accessor :board, :player_1, :player_2
                 turn
               end
               if won?
-                puts "Woot woot! congratulations #{winner} you won!"
+                puts "Congratulations #{winner}!"
               elsif draw?
                 puts "Cat's Game!"
               end
