@@ -12,9 +12,9 @@ module Players
           elsif board.turn_count == 3
               move = "3"
 
-            # If you went first (and took the middle), take a corner square with your second move.
+            # If you went first (and took the middle), take bottom corner with your second move.
             elsif board.turn_count == 2
-              move = [1, 3, 7, 9].detect{|i| !board.taken?(i)}.to_s
+              move = [7, 9].detect{|i| !board.taken?(i)}.to_s
 
             # If you went second (and took the middle) and the other player has occupied opposing corner squares, blow up the attempted trap by taking a side square.
             elsif board.turn_count == 3 && (board.position(1) == board.position(9) || board.position(3) == board.position(7))
